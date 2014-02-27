@@ -82,6 +82,8 @@ public class CR_BoardInitTests {
 	@Test
 	public void testNumberOfDoorways() 
 	{
+		board = new Board("ClueLayout.csv", "ClueLegend.txt");
+		board.loadConfigFiles();
 		int numDoors = 0;
 		int totalCells = board.getNumColumns() * board.getNumRows();
 		Assert.assertEquals(506, totalCells);
